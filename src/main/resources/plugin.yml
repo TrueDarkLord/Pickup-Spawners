@@ -1,0 +1,4 @@
+name: PickupSpawners
+version: '${version}'
+main: me.truedarklord.pickupspawners.PickupSpawners
+api-version: '1.20'
