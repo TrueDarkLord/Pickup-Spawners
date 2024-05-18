@@ -5,33 +5,30 @@ import org.bukkit.Material;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BlockStateMeta;
 
-public class BlockBreak implements Listener {
+public class SpawnerDrops implements Listener {
 
-    public BlockBreak(PickupSpawners plugin) {
+    public SpawnerDrops(PickupSpawners plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
-    public void onBlockBreak(BlockBreakEvent event) {
-        BlockState block = event.getBlock().getState();
-
+    public void onBlockBreak(BlockDropItemEvent event) {
+        BlockState block = event.getBlockState();
         if (block.getType() != Material.SPAWNER) return;
 
-        Player player = event.getPlayer();
-        ItemStack tool = player.getInventory().getItemInMainHand();
+        ItemStack tool = event.getPlayer().getInventory().getItemInMainHand();
 
         if (!tool.getType().toString().endsWith("PICKAXE")) return;
         if (!(tool.hasItemMeta() && tool.getItemMeta().hasEnchant(Enchantment.SILK_TOUCH))) return;
 
-        block.getWorld().dropItemNaturally(block.getLocation(), getSpawnerItem(block));
+        event.getItems().add(block.getWorld().dropItemNaturally(block.getLocation(), getSpawnerItem(block)));
 
     }
 
