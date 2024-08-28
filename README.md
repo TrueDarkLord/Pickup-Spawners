@@ -20,3 +20,4 @@ This plugin was created when 1.20.6 was released due to the lack of updates to o
 
 
 ## Feel free to open an [issue](https://github.com/TrueDarkLord/Pickup-Spawners/issues) if there are problems.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O0OI3A2)
