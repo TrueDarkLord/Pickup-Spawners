@@ -7,7 +7,7 @@ It's a simple plugin that makes picking up spawners with silk touch a normal Min
 Currently, there are no configuration options for the plugin, but we can add them later if there is interest in the project. The current version of the plugin was intentionally kept simple to reduce the likelihood of it breaking between different Minecraft versions.
 
 # Setup:
-- Download the jar file.
+- [Download](https://modrinth.com/plugin/pickup-spawners) the jar file.
 - Place the file into your server's plugin folder.
 - Start the server and Enjoy!
 
@@ -17,7 +17,6 @@ Currently, there are no configuration options for the plugin, but we can add the
 
 ### History
 This plugin was created when 1.20.6 was released due to the lack of updates to other plugins that allow you to pick up spawners, in an attempt to get the feature added to PBMC.
-
 
 ## Feel free to open an [issue](https://github.com/TrueDarkLord/Pickup-Spawners/issues) if there are problems.
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O0OI3A2)
