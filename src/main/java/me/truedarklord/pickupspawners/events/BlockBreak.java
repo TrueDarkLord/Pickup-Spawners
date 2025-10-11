@@ -36,6 +36,8 @@ public class BlockBreak implements Listener {
         Player player = event.getPlayer();
         ItemStack tool = player.getInventory().getItemInMainHand();
 
+        if (!player.hasPermission("pickupspawners.break")) return;
+
         if (!tool.getType().toString().endsWith("PICKAXE")) return;
         if (!(tool.hasItemMeta() && tool.getItemMeta().hasEnchant(Enchantment.SILK_TOUCH))) return;
 

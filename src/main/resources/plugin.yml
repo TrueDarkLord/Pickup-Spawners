@@ -4,3 +4,7 @@ main: me.truedarklord.pickupspawners.PickupSpawners
 api-version: '1.20'
 
 folia-supported: true
+
+permissions:
+  pickupspawners.break:
+    default: true
