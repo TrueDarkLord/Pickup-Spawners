@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'me.TrueDarkLord'
-version = '0.3.0'
+version = '0.3.1'
 
 repositories {
     mavenCentral()
@@ -27,6 +27,7 @@ dependencies {
 shadowJar {
     relocate 'org.bstats', 'me.truedarklord.pickupspawners.shaded.bstats'
     archiveClassifier.set('') // Removes "-shadow" from the output JAR name
+    minimize()
 }
 
 tasks.build {
