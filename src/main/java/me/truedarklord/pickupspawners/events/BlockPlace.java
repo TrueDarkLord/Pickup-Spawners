@@ -39,5 +39,4 @@ public class BlockPlace implements Listener {
         spawner.setSpawnedType(spawnerType);
         spawner.update();
     }
-
 }

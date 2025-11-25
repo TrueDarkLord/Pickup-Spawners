@@ -9,10 +9,9 @@ public final class PickupSpawners extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Metrics metrics = new Metrics(this, 23819);
+        new Metrics(this, 23819);
 
         new BlockBreak(this);
         new BlockPlace(this);
     }
-
 }
