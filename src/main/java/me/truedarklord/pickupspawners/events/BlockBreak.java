@@ -45,11 +45,9 @@ public class BlockBreak implements Listener {
         event.setDropItems(false); // Stop other plugins from handling it.
 
         dropItems(event.getBlock(), player, getSpawnerItem(block));
-
     }
 
     private ItemStack getSpawnerItem(BlockState block) {
-
         ItemStack spawnerItem = new ItemStack(Material.SPAWNER);
         BlockStateMeta spawnerMeta = (BlockStateMeta) spawnerItem.getItemMeta();
         CreatureSpawner spawnerState = (CreatureSpawner) spawnerMeta.getBlockState();
@@ -60,11 +58,9 @@ public class BlockBreak implements Listener {
         spawnerItem.setItemMeta(spawnerMeta);
 
         return spawnerItem;
-
     }
     
     private void dropItems(Block block, Player player, ItemStack item) {
-
         List<Item> drops = new ArrayList<>();
 
         drops.add(block.getWorld().dropItemNaturally(block.getLocation(), item));
@@ -74,8 +70,5 @@ public class BlockBreak implements Listener {
         if (event.callEvent()) return;
 
         event.getItems().forEach(Entity::remove);
-
     }
-
-
 }
