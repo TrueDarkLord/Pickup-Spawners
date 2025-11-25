@@ -2,7 +2,7 @@ package me.truedarklord.pickupspawners;
 
 import me.truedarklord.pickupspawners.events.BlockBreak;
 import me.truedarklord.pickupspawners.events.BlockPlace;
-import me.truedarklord.pickupspawners.metrics.Metrics;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PickupSpawners extends JavaPlugin {
